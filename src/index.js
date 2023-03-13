@@ -5,9 +5,9 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // render micro frontend function
-window.rendercreatereactapp = (containerId, history, counterApp, incrementContainerCounter) => {
+window.rendercreatereactapp = (containerId, history, counterApp, students, incrementContainerCounter) => {
   ReactDOM.render(
-    <App history={history} counterApp={counterApp} incrementContainerCounter={incrementContainerCounter} />,
+    <App history={history} students={students} counterApp={counterApp} incrementContainerCounter={incrementContainerCounter} />,
     document.getElementById(containerId)
   );
   serviceWorker.unregister();
