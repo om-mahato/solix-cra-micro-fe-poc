@@ -1,15 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App({counterApp, incrementContainerCounter}) {
+  console.log('counterApp', counterApp)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          React CRA
-        </p>
-      </header>
+      <div className='container'>
+        <div className='mb-3'>
+          MFE
+        </div>
+        <input className='mb-3' value={counterApp} disabled type="number" />
+        <button onClick={() => incrementContainerCounter()}>Increment</button>
+      </div>
     </div>
   );
 }
